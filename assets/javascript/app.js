@@ -18,21 +18,49 @@
 //OR just get values of radio buttons
 
 
+var correctAns= 0;
+var wrongAns= 0;
+var unanswered= 0;
 
+$('#form1 input').on('change', function () {
+    var userGuess1 = $('input[name=question1]:checked').val();
 
-$('#form1 input').on('change', function(){
- var userGuess1 = $('input[name=question1]:checked').val(); 
-    console.log(userGuess1);
-        if(userGuess1 === "Correct1"){
-            correctAns ++;
-        } if(userGuess1 === "Incorrect"){
-            wrongAns ++;
-        } 
-        else {
-            unaswered ++;
-        }
-    });
+    if (userGuess1 === "Correct1") {
+        correctAns++;
+    } if (userGuess1 === "Incorrect") {
+        wrongAns++;
+    }
+    else {
+        unaswered++;
+    }
 
+});
+
+$('#form2 input').on('change', function () {
+    var userGuess2 = $('input[name=question2]:checked').val();
+    console.log(userGuess2);
+    if (userGuess2 === "Correct2") {
+        correctAns++;
+    } if (userGuess2 === "Incorrect") {
+        wrongAns++;
+    }
+    else {
+        unaswered++;
+    }
+});
+
+$('#form3 input').on('change', function () {
+    var userGuess3 = $('input[name=question3]:checked').val();
+    
+    if (userGuess3 === "Correct3") {
+        correctAns++;
+    } if (userGuess3 === "Incorrect") {
+        wrongAns++;
+    }
+    else {
+        unaswered++;
+    }
+});
 
 
 // $('input[name=name_of_your_radiobutton]:checked').val();//how to check value for radio button
@@ -45,10 +73,10 @@ $('#form1 input').on('change', function(){
 //     $("#remaining-time").hide();
 //     $("#start").on('click', trivia.startGame);
 //     $(document).on('click' , '.option', trivia.guessChecker);
-    
+
 //   })
-    
-    
+
+
 //     var trivia = {
 //         //properties//
 //         correctAns: 0,
@@ -77,7 +105,7 @@ $('#form1 input').on('change', function(){
 //             q3: 'Option3',
 //             q4: 'Option4',
 //         },
-    
+
 //         // initialize game
 
 //         startGame: function(){
@@ -114,19 +142,19 @@ $('#form1 input').on('change', function(){
 //                 //create these on html
 //                 $.each(ansChoices, function(index, key){
 //                     $('#choices').append($('<button class="option btn btn-info btn-lg">'+key+'</button>'));
-                    
+
 //                 })
 
 
 
 //             }
 
-            
+
 //         }
 //     } 
-        
-        
-       
+
+
+
 
 //         //save option clicked to userGuess array//
 
@@ -137,9 +165,9 @@ $('#form1 input').on('change', function(){
 
 //         function test(options){
 //             for (i=0; i < options.length; i++){
-              
+
 //                 for (k=0; k < options.choice.length; k++){
-                    
+
 //                     if (options.choice[k].checked){
 //                         if(options.choice[k].value === options.answer[i])
 //                         correctAns ++;
@@ -162,7 +190,7 @@ $('#form1 input').on('change', function(){
 //         for (var i=0; i < options.length; i++){
 //             if(userGuess===options[i].answer){
 //                 correctAns ++;
-                
+
 //             } 
 //             if(userGuess){
 
