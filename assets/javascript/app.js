@@ -15,24 +15,27 @@
 //if userguess is ===correct ans id then correct++
 //else incorrect ++
 
+//OR just get values of radio buttons
+
+
 
 
 $('#form1 input').on('change', function(){
- var userGuess = $('input[name=question1]:checked', '#form1').val(); 
-    console.log(userGuess);
-        if(userGuess === "correct"){
+ var userGuess1 = $('input[name=question1]:checked').val(); 
+    console.log(userGuess1);
+        if(userGuess1 === "Correct1"){
             correctAns ++;
-        } if(userGuess === "incorrect"){
+        } if(userGuess1 === "Incorrect"){
             wrongAns ++;
         } 
         else {
             unaswered ++;
         }
     });
-});
 
 
-$('input[name=name_of_your_radiobutton]:checked').val();
+
+// $('input[name=name_of_your_radiobutton]:checked').val();//how to check value for radio button
 
 
 
